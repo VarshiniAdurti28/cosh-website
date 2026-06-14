@@ -6,7 +6,8 @@ import {LinkedinShareButton} from "react-share";
 import {TwitterShareButton} from "react-share";
 import {FacebookShareButton} from "react-share";
 import {Link} from 'react-router-dom';
-import {FaLinkedin, FaFacebookSquare, FaTwitterSquare} from 'react-icons/fa';
+import {FaLinkedin, FaFacebookSquare} from 'react-icons/fa';
+import { FaSquareXTwitter } from "react-icons/fa6";
 import {
     motion,
     useViewportScroll,
@@ -111,7 +112,7 @@ function Blog() {
                 quote={post.title}
                 hashtag="#camperstribe"
                 >
-                 <FaTwitterSquare size={36} />
+                 <FaSquareXTwitter size={36} />
               </TwitterShareButton>
                 </div>
             </div>

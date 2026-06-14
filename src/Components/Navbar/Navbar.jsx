@@ -152,18 +152,18 @@ function Navbar({setSearchOpen}) {
                             <motion.div className={`underline ${top === true ? '' : 'hide'} `} layoutId="underline" />
                         }
                     </Link>
-                    <Link to="/api-day" >API Day
+              {/*       <Link to="/api-day" >API Day
                         {
                             active !== 4 ? null :
                             <motion.div className={`underline ${top === true ? '' : 'hide'} `} layoutId="underline" />
                         }
-                    </Link>
-                    <Link to="/postman-classroom-program" >Postman Classroom Program
+                    </Link> */}
+                  {/*   <Link to="/postman-classroom-program" >Postman Classroom Program
                         {
                             active !== 5 ? null :
                             <motion.div className={`underline ${top === true ? '' : 'hide'} `} layoutId="underline" />
                         }
-                    </Link>
+                    </Link> */}
                     {/* <Link to="/domains">Domains</Link> */}
                     <div className="dropdown">
                         <motion.div
@@ -171,7 +171,7 @@ function Navbar({setSearchOpen}) {
                             onMouseEnter={toggleMouseMenu}
                             onMouseLeave={toggleMouseMenu}
                         >
-                            <p className="dropbtn">Domains
+                            <p className="dropbtn">Projects
                             {
                                 active !== 6 ? null :
                                 <motion.div className={`underline ${top === true ? '' : 'hide'} `} layoutId="underline" />
@@ -185,25 +185,20 @@ function Navbar({setSearchOpen}) {
                             >
                             {/* <div className="sub-menu-background" /> */}
                             <div className="sub-menu-container">
-                                {/* <Link to="/domains" state={{ goto: 1 }}>Artificial Intelligence</Link> */}
-                                {/* <Link to="/domains" state={{ goto: 2 }}>Blockchain</Link> */}
-                                <Link to="/domains" state={{ goto: 1 }}>Development</Link>
-                                {/* <Link to="/domains" state={{ goto: 4 }}>Electric Vehicles</Link> */}
-                                {/* <Link to="/domains" state={{ goto: 5 }}>Game Development</Link> */}
-                                <Link to="/domains" state={{ goto: 2 }}>Networking</Link>
-                                {/* <Link to="/domains" state={{ goto: 7 }}>Robotics</Link> */}
-                                {/* <Link to="/domains" state={{ goto: 8 }}>Security</Link> */}
-                                {/* <Link to="/domains" state={{ goto: 9 }}>Systems</Link> */}
+                                <a href="https://apnic.foundation/our-impact/migrating-nitk-surathkal-campus-network-to-ipv6/">IPv6 Migration</a>
+                                <a href="https://nest.nitk.ac.in/" >Network Stack Tester</a>
+                                <a href="https://apps.nsnam.org/app/quantum/" >Quantum Network Simulation Module</a>
+                                <a href="https://github.com/torvalds/linux/blob/master/net/sched/sch_fq_pie.c" >FQ-PIE</a>
                             </div>
                             </motion.div>
                         </motion.div>
                     </div>
-                    <Link to="/events" >Events
+                    {/* <Link to="/events" >Events
                         {
                             active !== 7 ? null :
                             <motion.div className={`underline ${top === true ? '' : 'hide'} `} layoutId="underline" />
                         }
-                    </Link>
+                    </Link> */}
                     <Link to="/blog" >Blog
                         {
                             active !== 8 ? null :

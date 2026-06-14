@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Moment from 'moment';
-import { AiFillTwitterCircle } from 'react-icons/ai';
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import {Helmet} from "react-helmet";
 import { motion, AnimatePresence } from "framer-motion";
@@ -98,8 +98,8 @@ function Home({domainList}) {
                         Latest Tweets
                     </h1>
                     <div>
-                        <AiFillTwitterCircle className="icon" />
-                        <a href="https://twitter.com/cosh_nitk" target="_blank">
+                        <FaSquareXTwitter className="icon" />
+                        <a href="https://x.com/cosh_nitk" target="_blank">
                             @cosh_nitk
                         </a>
                     </div>
@@ -118,12 +118,12 @@ function Home({domainList}) {
                     }
                 </div>
             </div>
-            <div className="homeSection4">
+              <div className="homeSection4">
                 <div className="homeSection4Container">
                     <h1 className="sectionHeader light">
-                        Domains
+                      
                     </h1>
-                    <DomainCards/>
+                 
                 </div>
             </div>
             <div className="homeSection5">
@@ -131,46 +131,26 @@ function Home({domainList}) {
                     <h1 className="sectionHeader">
                         Projects
                     </h1>
-                    {
-                        domainList.map((domain, i)=>{
-                             return <div key={i} style={{width: '100%'}}>
+                       <div className="projectCardsDiv ">
 
-                                <div className="domainBar" onClick={()=>open === i+1 ? setOpen(0) : setOpen(i+1)}>
-                                    <button>{domain.name}</button>
-                                    <motion.img 
-                                        src={open===i+1 ? il_minus : il_plus} 
-                                        className="il_plus" 
-                                        alt="Illustration" 
-                                        initial={false}
-                                        animate={{ rotate: open===i+1 ? 0 : 180 }}
-                                    />
-                                </div>  
-                                <AnimatePresence initial={false}>
-                                    {open===i+1 && (
-                                    <motion.section
-                                        key="content"
-                                        initial="collapsed"
-                                        animate="open"
-                                        exit="collapsed"
-                                        variants={{
-                                        open: { opacity: 1, height: "auto", marginBottom: "30px" },
-                                        collapsed: { opacity: 0, height: 0 , marginBottom: 0}
-                                        }}
-                                        transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
-                                    >
-                                        <div className={`content `}>
-                                            <ProjectCards projects={domain ? domain.projects : []} any={true} ongoing={true} domainId={domainList.length>0 && domain ? domain.id : null} />
-                                        </div>
-                                    </motion.section>
-                                    )}
-                                </AnimatePresence>
-                                <hr />
-                            </div>
-                        })
-                    }
-                    <Link to={"/domains"} className="button-dark">View all projects</Link>
+                        <a target="_blank"
+                            rel="noreferrer"
+                            className="projectCardDiv" href="https://apnic.foundation/our-impact/migrating-nitk-surathkal-campus-network-to-ipv6/"><h3>IPv6 Migration</h3></a>
+                        <a target="_blank"
+                            rel="noreferrer"
+                            className="projectCardDiv" href="https://nest.nitk.ac.in/" ><h3>Network Stack Tester</h3></a>
+                        <a target="_blank"
+                            rel="noreferrer"
+                            className="projectCardDiv" href="https://apps.nsnam.org/app/quantum/" ><h3>Quantum Network Simulation Module</h3></a>
+                        <a target="_blank"
+                            rel="noreferrer"
+                            className="projectCardDiv" href="https://github.com/torvalds/linux/blob/master/net/sched/sch_fq_pie.c" ><h3>FQ-PIE</h3></a>
+                       
+                </div>
+                   
                 </div>
             </div>
+           
             <div className="homeSection6">
                 <h1 className="sectionHeader">
                     Blog

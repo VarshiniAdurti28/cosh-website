@@ -77,10 +77,10 @@ function App() {
           <Route path='/how-we-work' element={<HowWeWork/>} />
           <Route path='/domains' element={<Domains domainList={domainList} />} />
           <Route path='/project/:id' element={<Project/>} />
-          <Route path='/events' element={<Events/>} />
-          <Route path='/events/:id' element={<Event/>} />
-          <Route path='/postman-classroom-program' element={<Postman/>} />
-          <Route path='/api-day' element={<Apiday/>} />
+          {/* <Route path='/events' element={<Events/>} />
+          <Route path='/events/:id' element={<Event/>} /> */}
+          {/* <Route path='/postman-classroom-program' element={<Postman/>} /> */}
+          {/* <Route path='/api-day' element={<Apiday/>} /> */}
           <Route exact path="/" element={<Navigate replace to="/home" />} />
           <Route path='/*' element={<NotFound/>} />
         </Routes>

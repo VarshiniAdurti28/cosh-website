@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { FiTwitter } from 'react-icons/fi';
+import { RiTwitterXFill } from "react-icons/ri";
 import { FiLinkedin } from 'react-icons/fi';
 import { FiGithub } from 'react-icons/fi';
 import { FiInstagram } from 'react-icons/fi';
@@ -33,15 +33,15 @@ function Footer() {
                     <Link to="/postman-classroom-program">Postman Program</Link>
                 </div>
                 <div className="footerColumn">
-                    <Link to="/domains">Domains</Link>
-                    <Link to="/events">Events</Link>
+                    <a href="#projects">Projects</a>
+                    {/* <Link to="/events">Events</Link> */}
                     <Link to="/blog">Blog</Link>
                     <Link to="/contact">Contact</Link>
                 </div>
                 <div className="footerColumn">
                     <h3>Follow us</h3>
                     <div className="iconRow">
-                        <a href = "https://twitter.com/cosh_nitk" target="_blank"><FiTwitter className="icon" /></a>
+                        <a href = "https://x.com/cosh_nitk" target="_blank"><RiTwitterXFill className="icon" /></a>
                         <a href = "https://www.linkedin.com/in/cosh-nitk-5aaa07222/" target="_blank"><FiLinkedin className="icon" /></a>
                         <a href = "https://github.com/COSH-NITK" target="_blank"><FiGithub className="icon" /></a>
                         <a href = "https://www.instagram.com/cosh_nitk/" target="_blank"><FiInstagram className="icon" /></a>

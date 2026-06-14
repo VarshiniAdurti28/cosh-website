@@ -10,10 +10,10 @@ export default (
     <Route path='/about' />
     <Route path='/contact' />
     <Route path='/how-we-work' />
-    <Route path='/domains' />
-    <Route path='/project/:id' />
+    {/* <Route path='/domains' />
+    <Route path='/project/:id' /> 
     <Route path='/events' />
-    <Route path='/events/:id' />
+    <Route path='/events/:id' /> */}
     <Route exact path="/" />
  </BrowserRouter>
 )
